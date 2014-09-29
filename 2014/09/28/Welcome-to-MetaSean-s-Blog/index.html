@@ -97,18 +97,18 @@ This blog is primarily to document my journeys through the lands of JavaScript, 
 <p>Because I’m diving head-first into JavaScript and Node.js, I knew I wanted this blog to be based on JavaScript and Node.js.  I also wanted something that was easy to get started with, but that would still allow me to customize it, and in particular that would allow me to use newly acquired skills to personalize and extend it.</p>
 <p>As part of the “easy to get started with”, I wanted something that would allow me to get it up on GitHub personal pages, but with the goal to eventually self-host.</p>
 <h2 id="Metalsmith">Metalsmith</h2>
-<p>I played with <a href="http://www.metalsmith.io/" target="_blank" rel="external">Metalsmith</a> for a while, quite a while in fact.  I followed the <a href="http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/" target="_blank" rel="external">go to tutorial for Metalsmith</a>, but my the end of the second part I was consistently lost and didn’t have a functioning blog.</p>
+<p>I played with <a href="http://www.metalsmith.io/" target="_blank" rel="external">Metalsmith</a> for a while, quite a while in fact.  I followed the <a href="http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/" target="_blank" rel="external">go to tutorial for Metalsmith</a>, but by the end of the second part I was consistently lost and didn’t have a functioning blog.</p>
 <p>At this point, Metalsmith fails my “easy to get started with” test.  It looks like a powerful approach, and I’ll probably revisit it when I’m further along in my own JavaScript journey, but after much frustration I needed to move on.</p>
 <h2 id="Hexo">Hexo</h2>
 <p>My last attempt to get Metalsmith up and running was toward the end of my first week at DevMountain.  I wanted to have my blog up, running, and problem-free - NOW!  I did a really, really quick review of different Node.js blog frameworks, and the one that popped out as most closely aligned with my needs was <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>.  So after writing up my DevMountain - Week One post in markdown, I worked on getting my Hexo-based blog up and running.</p>
 <h2 id="My_Hexo_Journey_thus_far…">My Hexo Journey thus far…</h2>
 <h3 id="In_the_Beginning…">In the Beginning…</h3>
 <p>I followed the <a href="http://hexo.io/docs/index.html" target="_blank" rel="external">excellent documentation</a> and had a server running, with my existing markdown file, and I was having a ton of fun within 15 minutes! This definitely met my “easy to get started with” requirement.  </p>
-<p>I got it to a point where I was ready to push it to my GitHub pages, and <strong><em>fail</em></strong>.  Ouch!  I started troubleshooting, and troubleshooting, and more troubleshooting.  I went through the documentation, a mucked around with my <code>_config.yml</code> files, all to no avail.  </p>
+<p>I got it to a point where I was ready to push it to my GitHub pages, and <strong><em>fail</em></strong>.  Ouch!  I started troubleshooting, and troubleshooting, and more troubleshooting.  I went through the documentation, and mucked around with my <code>_config.yml</code> files, all to no avail.  </p>
 <h3 id="The_Hexo_Community_comes_through!">The Hexo Community comes through!</h3>
 <p>Finally, I posted my problem to <a href="https://github.com/hexojs/hexo/issues/857" target="_blank" rel="external">Hexo issues</a>. </p>
-<p>It was quiet for an eternity of 12 hours (like a watched pot, a watched issues seems silent for an eternity)!  </p>
-<p>Then a couple of folks (<a href="https://github.com/jkuetemeier" target="_blank" rel="external">jkuetemeier</a> and <a href="https://github.com/jr0cket" target="_blank" rel="external">jr0cket</a>) made suggestions, one of which moved me forward ever so slightly.  </p>
+<p>It was quiet for an eternity of 12 hours (like a watched pot, a watched issue seems silent for an eternity)!  </p>
+<p>Then a couple of folks (<a href="https://github.com/jkuetemeier" target="_blank" rel="external">jkuetemeier</a> and <a href="http://jr0cket.co.uk/" target="_blank" rel="external">John Stevenson, aka jr0cket</a>) made suggestions, one of which moved me forward ever so slightly.  </p>
 <p>I posted a detailed update, and almost immediately got a response from <a href="https://github.com/tommy351" target="_blank" rel="external">Hexo’s creator</a>.  </p>
 <p>I followed his suggustion and gave an update on my still stalled progress. Almost immediately I was greeted with a painful sign - my issue was given a “bug” label.  </p>
 <p>So I waited another eternity (i.e. about 8.5 hrs this time).  </p>
@@ -128,11 +128,11 @@ This blog is primarily to document my journeys through the lands of JavaScript, 
 <li><p>Using a theme wasn’t quite as easy as I would have liked, but it certainly wasn’t hard.  It simply wasn’t as modularized and reusable as I’d like, but more about that in just a moment.</p>
 </li>
 </ul>
-<p>So far, I really only have a few big grips (and in the grand-scheme, they’re still pretty small).</p>
+<p>So far, I really only have a few grips (and in the grand-scheme, they’re still pretty small).</p>
 <ul>
 <li><p>While having the themes be completely stand-alone has advantages, it also has some disadvantages.  For example, in trying to move back and forth between the Pacman theme and the RagingCat theme (a derivative of the Pacman theme), I had to reenter a lot of <code>theme/_config.yml</code> data that was common between them - i.e. it’s not <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="external">DRY</a>.  </p>
 </li>
-<li><p>Another impact of the completely modular theme approach was when I tried to add a logo.  I initially added it to the <code>hexo/public/img</code> directory, but during a standard <code>hexo clean</code>, <code>hexo generate</code> process it was “cleaned out”.  That’s when I realized that I have to put my logo in the <code>hexo/theme/*theme*/img</code> directory.  Which means if I switch themes, I have to move it <em>for each theme</em>.  Why not have a single <code>hexo/src/img</code> directory instead that all of the themes could pull from?</p>
+<li><p>Another impact of the completely modular theme approach was when I tried to add a logo.  I initially added it to the <code>hexo/public/img</code> directory, but during a standard <code>hexo clean</code>, <code>hexo generate</code> process it was “cleaned out”.  That’s when I realized that I have to put my logo in the <code>hexo/theme/*theme*/img</code> directory.  Which means if I switch themes, I have to move it <em>for each theme</em>.  Instead, why not have a single <code>hexo/src/img</code> directory that all of the themes could pull from?</p>
 </li>
 <li><p>And more variations on a theme - while there are script plugins, they also belong to the <code>hexo/theme/*theme*/scripts</code> directory, not a <code>hexo/scripts</code> directory.  :-(</p>
 </li>
