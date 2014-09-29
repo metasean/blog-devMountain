@@ -1,0 +1,360 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>DevMountain - Week Two | MetaSean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="MetaSean">
+    
+    <meta name="description" content="Overview
+Last week was our only week on html and css.  The first three lectures this week felt like excessively redundant reviews of the pre-course work material.  (Just to be clear, I’m not saying that Trevor or Jake’s presentations were bad!)  The exercises that accompanied those lesson were much more useful as refreshers.  
+But then we hit the callback homework and Saturday morning’s exercise!">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/d97ea3132ed3652bd4658a5a7ec6ce84.png" alt="MetaSean" title="MetaSean"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="MetaSean">MetaSean</a></h1>
+				<h2 class="blog-motto">Tales from a JS Craftsman in the making</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:metasean.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/09/27/DevMountain-Week-Two/" title="DevMountain - Week Two" itemprop="url">DevMountain - Week Two</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://metasean.github.io" title="MetaSean">MetaSean</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-09-27T06:00:00.000Z" itemprop="datePublished">Sep 27 2014</time>
+    Updated:<time datetime="2014-09-28T06:00:00.000Z" itemprop="dateModified">Sep 28 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#My_Challenges"><span class="toc-number">2.</span> <span class="toc-text">My Challenges</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Callbacks_and_-this"><span class="toc-number">2.1.</span> <span class="toc-text">Callbacks and .this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Saturday_Morning’s_Exercise_-_War"><span class="toc-number">2.2.</span> <span class="toc-text">Saturday Morning’s Exercise - War</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementing_Callbacks"><span class="toc-number">2.3.</span> <span class="toc-text">Implementing Callbacks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays,_null,_and_falseys"><span class="toc-number">2.4.</span> <span class="toc-text">Arrays, null, and falseys</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-number">3.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Follow-up"><span class="toc-number">4.</span> <span class="toc-text">Follow-up</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2014-09-28"><span class="toc-number">4.1.</span> <span class="toc-text">2014-09-28</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="Overview">Overview</h1>
+<p>Last week was our only week on html and css.  The first three lectures this week felt like excessively redundant reviews of the pre-course work material.  (Just to be clear, I’m not saying that <a href="https://github.com/trevordmiller" target="_blank" rel="external">Trevor</a> or Jake’s presentations were bad!)  The exercises that accompanied those lesson were much more useful as refreshers.  </p>
+<p>But then we hit the <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/" target="_blank" rel="external">callback homework</a> and <a href="https://github.com/DevMountain/war" target="_blank" rel="external">Saturday morning’s exercise</a>!</p>
+<a id="more"></a>
+
+
+<blockquote>
+
+<p>A pupil from whom nothing is demanded which he cannot do will not achieve all he can.</p>
+<footer><strong>John Stuart Mill, Autobiography Childhood && Early Education - chapter 1 - page 32</strong><cite><a href="http://archive.org/stream/autobiographymil00milluoft#page/32/mode/2up/search/%22a+pupil+from+whom+nothing+is+ever+demanded+which+he+cannot+do+never+does+all+he+can%22" target="_blank" rel="external">archive.org/stream/&hellip;</a></cite></footer></blockquote>
+
+
+
+<h1 id="My_Challenges">My Challenges</h1>
+<h2 id="Callbacks_and_-this">Callbacks and .this</h2>
+<p>So I’ve been studying JavaScript on my own for a few months, and had already run into callbacks.  I’ve also done programming with procedural and object-oriented paradigms, so ironically, it’s taken me a while to understand them. At this point, I definitely get them - well, at least in theory - and think <em>they’re pretty dang awesome!</em>  </p>
+<p>So the callback introduction section of the reading was a breeze.  But then I read about the interaction between callbacks and .this - man was I lost.  Actually, the scoping part (i.e. the problem) seemed really easy to understand, it’s the solution that left me dazed and confused.  I ended up reading that section at least half a dozen times and I’m still lost.  The irony is that shortly after he describes the problem, and just before he shows example solution code he states’ “This sounds complex, but lets see how easy it is to use Apply or Call.”   Not — oh so “<em>NOT</em>!”  The example actually made the solution seem even more complex and illogical!</p>
+<p>Needless to say, I was really looking forward to <a href="https://github.com/tylermcginnis33" target="_blank" rel="external">Tyler</a>‘s presentation on Saturday, just so that I could get a different explanation and hopefully some more examples.  Unfortunately, he had to leave early, so that’s been put off until Tuesday.  :-(  </p>
+<h2 id="Saturday_Morning’s_Exercise_-_War">Saturday Morning’s Exercise - War</h2>
+<p>With two exceptions, I loved Saturday Morning’s Exercise!  We were given completed html and css files, along with a JavaScript file that provided a rough outline, for the card game ‘War’.  Our job was to flesh out the JavaScript file.  With one exception — that Tyler attributed to a hoisting problem in their rough outline — I didn’t have any real problems with this assignment.  I did have my usual typos, and am really grateful that I was sitting next to <a href="https://github.com/kejcbsn" target="_blank" rel="external">Kelsey</a> — our mistake styles seem to be polar opposite, so we’re really fast at spotting the other’s code faux pas!</p>
+<p>One thing I really would have preferred is to have had a more test-driven approach during this exercise.  (note to self: develop tests for ‘War’ exercise.)  Another “nice-to-have” thing would have been a visual display of each players’ cards.  (note to self: augment gui with player’s current hands.)</p>
+<p>That said, I also would have preferred to have had exercises earlier this week along these lines!!!</p>
+<h2 id="Implementing_Callbacks">Implementing Callbacks</h2>
+<p>Like last week, Saturday afternoon we had a week-end assessment.  By and large, this was fairly simple.  There was a critical typo in one of the exercises that threw me (and some others) for a loop (i.e. “Create a function…” is very different than “Create an object…”)!  And then there was the callback exercise!</p>
+<p>Because Tyler didn’t cover callbacks, we were told we didn’t need to do the callback exercise.  But since I have theoretically grasped basic callbacks, I really wanted to play with some simple callback code.</p>
+<p>I took a first stab at the first problem, but for the life of me, I couldn’t get it to work.  I finally broke down and called my mentor, Paul, over.  He initially thought the problem was one thing (how I was passing a parameter that the callback needed).  After fixing that, the code still wouldn’t work.  It was really clear that Paul thought it should!  </p>
+<p>Remembering that the earlier War exercise had a hoisting problem, I suggested that maybe that was also the issue here.  We returned my code to a pre-Paul state, and then reordered the code. Sure enough, it had been a hoisting problem!  Well, mostly a hoisting problem. </p>
+<p>The problem Paul had picked up on early was also a problem.  This one was indicative of one of my conceptual struggles with callbacks.  So Paul and I went over the code and I definitely feel more comfortable with basic callbacks.  Of course, I want more simple callback exercises, just to cement it before it fades into the intellectual ether!</p>
+<p>While I was definitely slow on the second problem, I did manage to get it coded without assistance.</p>
+<h2 id="Arrays,_null,_and_falseys">Arrays, null, and falseys</h2>
+<p>One of the few problems from earlier in the week, that really caused me to spin my wheels, dealt with removing falsey values from an array.  I had tackled this problem with a simple loop.  Despite my best efforts, it was clear that there was a null value that wasn’t being removed.  <a href="http://stackoverflow.com/questions/281264/remove-empty-elements-from-an-array-in-javascript" target="_blank" rel="external">It turns out to have been a challenging problem for more than a few people.</a>  Misery loves company; likewise, learners love knowing they’re not the only one struggling with a concept or implementation!</p>
+<h1 id="Summary">Summary</h1>
+<p>Most of this week felt like a review, and just when it felt like we were getting to some actual meaty material, we mostly didn’t.  :-(  </p>
+<p>I am grateful that there was the small set of callback exercises and that Paul was there to help me get started, but I’m really looking forward to digging deeper into callbacks, and having some alternative descriptions and examples for the callback / .this issues!</p>
+<h1 id="Follow-up">Follow-up</h1>
+<h2 id="2014-09-28">2014-09-28</h2>
+<p>So the whole closure practice thing and closure/.this thing was really eating at me, so last night I started the <a href="https://www.codeschool.com/" target="_blank" rel="external">Code School</a> - <a href="https://www.codeschool.com/courses/javascript-road-trip-part-3" target="_blank" rel="external">JavaScript Road Trip 3</a> - <a href="http://javascript-roadtrip-part3.codeschool.com/levels/2" target="_blank" rel="external">Cold Closures Cove</a> chapter.  I spent a lot of time just trying to figure out their system constraints.  For example, I kept getting an error message that I needed to watch my whitespace; it turned out to be a mismatch between how I had formated my alert message and how they wanted it formated.  </p>
+<p>Once I got past the system constraints, the first two sections (i.e., “Tracing, Building and Using Closures” and “Modifying Bound Values After Closure”) were actually pretty easy (with a perfect 3250 score; WOOT).  </p>
+<p>Then I started watching the video for “Dangers at the Moment of Closure”!  Exhaustion prevented my brain from following any of it, so I called it a night.  I watched the video twice this morning.  The first time through was a straight ‘watch’.  The second time I stopped and really examined the code, and started to wrap my head around the solutions.  The first exercise was almost a joke.  The second one was a real challenge, but I still got a perfect score for the course, so WOOT!</p>
+<p><a href="https://www.codeschool.com/users/MetaSean/badges/323" target="_blank"><br><img alt="Level 2 on JavaScript Road Trip Part 3" class="awarded" rel="tiptip-badges" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/323/level-2-on-javascript-road-trip-part-3-e58e3b10b168279919542555c1c961d9.png" title="Level 2 on JavaScript Road Trip Part 3" height="117" width="118"></a></p>
+<p>And once I got started, I kinda wanted to keep going. Unfortunately, other obligations kept me from finishing all of JavaScript Road Trip Part 3, but I did successfully finish Forest of Function Expressions and Hoisting Hills.  </p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/DevMountain/">DevMountain</a><a href="/tags/callbacks/">callbacks</a><a href="/tags/-this/">.this</a><a href="/tags/closures/">closures</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://metasean.github.io/2014/09/27/DevMountain-Week-Two/" data-title="DevMountain - Week Two | MetaSean" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/09/28/Welcome-to-MetaSean-s-Blog/" title="Welcome to MetaSean&#39;s Blog">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  Welcome to MetaSean&#39;s Blog</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/09/20/DevMountain-Week-One/"  title="DevMountain - Week One">
+ <strong>NEXT:</strong><br/> 
+ <span>DevMountain - Week One
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#My_Challenges"><span class="toc-number">2.</span> <span class="toc-text">My Challenges</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Callbacks_and_-this"><span class="toc-number">2.1.</span> <span class="toc-text">Callbacks and .this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Saturday_Morning’s_Exercise_-_War"><span class="toc-number">2.2.</span> <span class="toc-text">Saturday Morning’s Exercise - War</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementing_Callbacks"><span class="toc-number">2.3.</span> <span class="toc-text">Implementing Callbacks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays,_null,_and_falseys"><span class="toc-number">2.4.</span> <span class="toc-text">Arrays, null, and falseys</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-number">3.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Follow-up"><span class="toc-number">4.</span> <span class="toc-text">Follow-up</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2014-09-28"><span class="toc-number">4.1.</span> <span class="toc-text">2014-09-28</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/-this/" title=".this">.this<sup>1</sup></a></li>
+		
+			<li><a href="/tags/DevMountain/" title="DevMountain">DevMountain<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/callbacks/" title="callbacks">callbacks<sup>1</sup></a></li>
+		
+			<li><a href="/tags/closures/" title="closures">closures<sup>1</sup></a></li>
+		
+			<li><a href="/tags/colophon/" title="colophon">colophon<sup>1</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/html5/" title="html5">html5<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<section class="info">
+		<p> MetaSean <br/>
+			A full stack JavaScript Craftsman in the making</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		<a href="https://github.com/https://github/metasean" target="_blank" title="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> with a personalied  <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> theme © 2014 
+		
+		<a href="http://metasean.github.io" target="_blank" title="MetaSean">MetaSean</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>

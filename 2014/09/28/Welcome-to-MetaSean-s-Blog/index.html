@@ -1,0 +1,369 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Welcome to MetaSean&#39;s Blog | MetaSean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="MetaSean">
+    
+    <meta name="description" content="Hello and welcome to MetaSean’s Blog!
+This blog is primarily to document my journeys through the lands of JavaScript, but I’m sure I’ll occasionally deviate.">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/d97ea3132ed3652bd4658a5a7ec6ce84.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/d97ea3132ed3652bd4658a5a7ec6ce84.png" alt="MetaSean" title="MetaSean"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="MetaSean">MetaSean</a></h1>
+				<h2 class="blog-motto">Tales from a JS Craftsman in the making</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:metasean.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/09/28/Welcome-to-MetaSean-s-Blog/" title="Welcome to MetaSean&#39;s Blog" itemprop="url">Welcome to MetaSean&#39;s Blog</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://metasean.github.io" title="MetaSean">MetaSean</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-09-28T06:00:00.000Z" itemprop="datePublished">Sep 28 2014</time>
+    Updated:<time datetime="2014-09-28T06:00:00.000Z" itemprop="dateModified">Sep 28 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Choice_of_Blog_Framework"><span class="toc-number">1.</span> <span class="toc-text">Choice of Blog Framework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic_Constraints"><span class="toc-number">1.1.</span> <span class="toc-text">Basic Constraints</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Metalsmith"><span class="toc-number">1.2.</span> <span class="toc-text">Metalsmith</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo"><span class="toc-number">1.3.</span> <span class="toc-text">Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My_Hexo_Journey_thus_far…"><span class="toc-number">1.4.</span> <span class="toc-text">My Hexo Journey thus far…</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#In_the_Beginning…"><span class="toc-number">1.4.1.</span> <span class="toc-text">In the Beginning…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The_Hexo_Community_comes_through!"><span class="toc-number">1.4.2.</span> <span class="toc-text">The Hexo Community comes through!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Up_and_Running"><span class="toc-number">1.4.3.</span> <span class="toc-text">Up and Running</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-number">2.</span> <span class="toc-text">Summary</span></a></li></ol>
+		</div>
+		
+		<p>Hello and welcome to MetaSean’s Blog!</p>
+<p>This blog is primarily to document my journeys through the lands of JavaScript, but I’m sure I’ll occasionally deviate.</p>
+<a id="more"></a>
+
+<blockquote>
+
+<p>A successful man is one who can lay a firm foundation with the bricks others have thrown at him.</p>
+<footer><strong>David Brinkley</strong></footer></blockquote>
+
+
+<h1 id="Choice_of_Blog_Framework">Choice of Blog Framework</h1>
+<h2 id="Basic_Constraints">Basic Constraints</h2>
+<p>Because I’m diving head-first into JavaScript and Node.js, I knew I wanted this blog to be based on JavaScript and Node.js.  I also wanted something that was easy to get started with, but that would still allow me to customize it, and in particular that would allow me to use newly acquired skills to personalize and extend it.</p>
+<p>As part of the “easy to get started with”, I wanted something that would allow me to get it up on GitHub personal pages, but with the goal to eventually self-host.</p>
+<h2 id="Metalsmith">Metalsmith</h2>
+<p>I played with <a href="http://www.metalsmith.io/" target="_blank" rel="external">Metalsmith</a> for a while, quite a while in fact.  I followed the <a href="http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/" target="_blank" rel="external">go to tutorial for Metalsmith</a>, but my the end of the second part I was consistently lost and didn’t have a functioning blog.</p>
+<p>At this point, Metalsmith fails my “easy to get started with” test.  It looks like a powerful approach, and I’ll probably revisit it when I’m further along in my own JavaScript journey, but after much frustration I needed to move on.</p>
+<h2 id="Hexo">Hexo</h2>
+<p>My last attempt to get Metalsmith up and running was toward the end of my first week at DevMountain.  I wanted to have my blog up, running, and problem-free - NOW!  I did a really, really quick review of different Node.js blog frameworks, and the one that popped out as most closely aligned with my needs was <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>.  So after writing up my DevMountain - Week One post in markdown, I worked on getting my Hexo-based blog up and running.</p>
+<h2 id="My_Hexo_Journey_thus_far…">My Hexo Journey thus far…</h2>
+<h3 id="In_the_Beginning…">In the Beginning…</h3>
+<p>I followed the <a href="http://hexo.io/docs/index.html" target="_blank" rel="external">excellent documentation</a> and had a server running, with my existing markdown file, and I was having a ton of fun within 15 minutes! This definitely met my “easy to get started with” requirement.  </p>
+<p>I got it to a point where I was ready to push it to my GitHub pages, and <strong><em>fail</em></strong>.  Ouch!  I started troubleshooting, and troubleshooting, and more troubleshooting.  I went through the documentation, a mucked around with my <code>_config.yml</code> files, all to no avail.  </p>
+<h3 id="The_Hexo_Community_comes_through!">The Hexo Community comes through!</h3>
+<p>Finally, I posted my problem to <a href="https://github.com/hexojs/hexo/issues/857" target="_blank" rel="external">Hexo issues</a>. </p>
+<p>It was quiet for an eternity of 12 hours (like a watched pot, a watched issues seems silent for an eternity)!  </p>
+<p>Then a couple of folks (<a href="https://github.com/jkuetemeier" target="_blank" rel="external">jkuetemeier</a> and <a href="https://github.com/jr0cket" target="_blank" rel="external">jr0cket</a>) made suggestions, one of which moved me forward ever so slightly.  </p>
+<p>I posted a detailed update, and almost immediately got a response from <a href="https://github.com/tommy351" target="_blank" rel="external">Hexo’s creator</a>.  </p>
+<p>I followed his suggustion and gave an update on my still stalled progress. Almost immediately I was greeted with a painful sign - my issue was given a “bug” label.  </p>
+<p>So I waited another eternity (i.e. about 8.5 hrs this time).  </p>
+<p>Then jr0cket posted another suggestion, along with caveat commands to get log information if it didn’t work (this did not inspire confidence).  So, with mixed excitement and dread, I followed his suggestion, and, well, here we are! :-)  <em>WOOT, WOOT!!</em></p>
+<h3 id="Up_and_Running">Up and Running</h3>
+<p>With it fully up and running, I’ve been playing with Hexo off and on for the last two days (between DevMountain class, related assignments, and trying to wrap my head around callbacks and .this interactions).</p>
+<p>The Pros:</p>
+<ul>
+<li><p>Hexo is definitely easy to use, pretty much as is.</p>
+</li>
+<li><p>There is an active and responsive global community.  Having a global community is awesome, but it does mean a person can be waiting an eternity (of 8-12 hours) for responses to issues. </p>
+</li>
+<li><p>Installing themes is also really easy.</p>
+</li>
+<li><p>I ended up modifying one of the standard themes - Pacman.  </p>
+</li>
+<li><p>Using a theme wasn’t quite as easy as I would have liked, but it certainly wasn’t hard.  It simply wasn’t as modularized and reusable as I’d like, but more about that in just a moment.</p>
+</li>
+</ul>
+<p>So far, I really only have a few big grips (and in the grand-scheme, they’re still pretty small).</p>
+<ul>
+<li><p>While having the themes be completely stand-alone has advantages, it also has some disadvantages.  For example, in trying to move back and forth between the Pacman theme and the RagingCat theme (a derivative of the Pacman theme), I had to reenter a lot of <code>theme/_config.yml</code> data that was common between them - i.e. it’s not <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="external">DRY</a>.  </p>
+</li>
+<li><p>Another impact of the completely modular theme approach was when I tried to add a logo.  I initially added it to the <code>hexo/public/img</code> directory, but during a standard <code>hexo clean</code>, <code>hexo generate</code> process it was “cleaned out”.  That’s when I realized that I have to put my logo in the <code>hexo/theme/*theme*/img</code> directory.  Which means if I switch themes, I have to move it <em>for each theme</em>.  Why not have a single <code>hexo/src/img</code> directory instead that all of the themes could pull from?</p>
+</li>
+<li><p>And more variations on a theme - while there are script plugins, they also belong to the <code>hexo/theme/*theme*/scripts</code> directory, not a <code>hexo/scripts</code> directory.  :-(</p>
+</li>
+</ul>
+<h1 id="Summary">Summary</h1>
+<p>I’ve got Hexo up and running - WOOT!</p>
+<p>There are certainly some annoyances, but Hoxo (a) absolutely meets my immediate needs and (b) is hackable, so when I have the skills to address the things I find annoying, I will be able to do so.  So, at this point it seems like a major “WIN”!</p>
+<p>I’m sure to make many changes to this site over in the near future, so stay tuned.  But right now – I’m just happy to have a basic, customized, node.js blog up and running, with posts for my first two weeks at DevMountain.</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/colophon/">colophon</a><a href="/tags/Hexo/">Hexo</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://metasean.github.io/2014/09/28/Welcome-to-MetaSean-s-Blog/" data-title="Welcome to MetaSean&#39;s Blog | MetaSean" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2014/09/27/DevMountain-Week-Two/"  title="DevMountain - Week Two">
+ <strong>NEXT:</strong><br/> 
+ <span>DevMountain - Week Two
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Choice_of_Blog_Framework"><span class="toc-number">1.</span> <span class="toc-text">Choice of Blog Framework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic_Constraints"><span class="toc-number">1.1.</span> <span class="toc-text">Basic Constraints</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Metalsmith"><span class="toc-number">1.2.</span> <span class="toc-text">Metalsmith</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo"><span class="toc-number">1.3.</span> <span class="toc-text">Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My_Hexo_Journey_thus_far…"><span class="toc-number">1.4.</span> <span class="toc-text">My Hexo Journey thus far…</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#In_the_Beginning…"><span class="toc-number">1.4.1.</span> <span class="toc-text">In the Beginning…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The_Hexo_Community_comes_through!"><span class="toc-number">1.4.2.</span> <span class="toc-text">The Hexo Community comes through!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Up_and_Running"><span class="toc-number">1.4.3.</span> <span class="toc-text">Up and Running</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-number">2.</span> <span class="toc-text">Summary</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/-this/" title=".this">.this<sup>1</sup></a></li>
+		
+			<li><a href="/tags/DevMountain/" title="DevMountain">DevMountain<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/callbacks/" title="callbacks">callbacks<sup>1</sup></a></li>
+		
+			<li><a href="/tags/closures/" title="closures">closures<sup>1</sup></a></li>
+		
+			<li><a href="/tags/colophon/" title="colophon">colophon<sup>1</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/html5/" title="html5">html5<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<section class="info">
+		<p> MetaSean <br/>
+			A full stack JavaScript Craftsman in the making</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		<a href="https://github.com/https://github/metasean" target="_blank" title="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> with a personalied  <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> theme © 2014 
+		
+		<a href="http://metasean.github.io" target="_blank" title="MetaSean">MetaSean</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
