@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MetaSean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="html-css-assessment
+Draft of future related blog post…
+Overview
+Between homework, classwork, job, and just general life, there won’t be a lot of time to do recaps.  Regardless, I’m going to try to kno">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MetaSean">
+<meta property="og:url" content="http://metasean.github.io/projects/DevMountain-Week-One/html-css-assessment/README.html">
+<meta property="og:site_name" content="MetaSean">
+<meta property="og:description" content="html-css-assessment
+Draft of future related blog post…
+Overview
+Between homework, classwork, job, and just general life, there won’t be a lot of time to do recaps.  Regardless, I’m going to try to kno">
+<meta property="og:image" content="https://raw.githubusercontent.com/metasean/html-css-assessment/master/assessment.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MetaSean">
+<meta name="twitter:description" content="html-css-assessment
+Draft of future related blog post…
+Overview
+Between homework, classwork, job, and just general life, there won’t be a lot of time to do recaps.  Regardless, I’m going to try to kno">
+
+  
+    <link rel="alternative" href="/atom.xml" title="MetaSean" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="../../source/images/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MetaSean</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">tales from a JS Craftsman in the making</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://metasean.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/projects/DevMountain-Week-One/html-css-assessment/README.html" class="article-date">
+  <time datetime="2014-10-05T23:48:21.000Z" itemprop="datePublished">2014-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <h1 id="html-css-assessment">html-css-assessment</h1>
+<p>Draft of future related blog post…</p>
+<h1 id="Overview">Overview</h1>
+<p>Between homework, classwork, job, and just general life, there won’t be a lot of time to do recaps.  Regardless, I’m going to try to knock out an entry each week. It will probably be quick and dirty, with lots of room for improvement, but it will be better than nothing. :-)</p>
+<p>Week one was spent covering the fundementals of git, github, html5, and CSS, and slightly beyond fundemantal CSS.  Most of our exercises focused on writing the html and css files for webpage mock-ups.  My favorite exercise was definitely the last one.</p>
+<p>The last exercise, replicating the assessment.png had a couple of things I found challenging, including:</p>
+<ol>
+<li>Rounding specific corners</li>
+<li>The listo logo and icon</li>
+<li>Centering lists to the page</li>
+<li>The large, outlined “+” graphic</li>
+<li>Responsive design</li>
+</ol>
+<h4 id="The_mockup_to_match:">The mockup to match:</h4>
+<p> <a href="https://raw.githubusercontent.com/metasean/html-css-assessment/master/assessment.png" target="_blank"><img src="https://raw.githubusercontent.com/metasean/html-css-assessment/master/assessment.png" alt="assessment.png"></a></p>
+<h1 id="My_Challenges">My Challenges</h1>
+<h2 id="1-_Rounding_specific_corners">1. Rounding specific corners</h2>
+<h3 id="Challenge">Challenge</h3>
+<p>If you take a look at the target layout, you’ll notice that the first and last list entries have two each of their corners rounded, while all the other corners for list entries are default 90° angles.</p>
+<h3 id="Result">Result</h3>
+<p>This turned out to be much easier than I expected!</p>
+<p>I used the <code>:nth-child()</code> and <code>last-child</code> CSS selectors, and corner specific assignment.  The end result was:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class">.list</span> <span class="class">.list-item</span><span class="pseudo">:nth-child(2)</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">4px</span> <span class="number">4px</span> <span class="number">0</span> <span class="number">0</span> </span></span>;</div><div class="line">   <span class="rule"><span class="attribute">border-top-width</span>:<span class="value"> <span class="number">2px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.list</span> <span class="class">.list-item</span><span class="pseudo">:last-child</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="number">4px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="2-_The_listo_Logo_and_Icon">2. The listo Logo and Icon</h2>
+<h3 id="Challenge-1">Challenge</h3>
+<p>The ‘listo’ logo and icon are not standard glyphs.  Since we were supposed to do this with html &amp; css, I took the generation of the logo and icon as a challenge.</p>
+<h3 id="Result-1">Result</h3>
+<p>My general concept was to take two glyphs that exist and morph them into an acceptable approximation of the listo glyph.  I used the triple equivalent symbol and a simple, lower-case letter “l” with an inverted color-scheme.  Positioning the two base glyphs turned out to be particularly challenging (and time-consuming) because of browser differences.  In the end, I think I did a pretty good job (at least, based on the latest Chrome Canary, Firefox, and Safari browsers).</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="class">.equivalent-symbol</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.equivalent-bar</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">1</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.title-bar</span> <span class="class">.equivalent-symbol</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> -<span class="number">0.17em</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">3em</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.title-bar</span> <span class="class">.equivalent-bar</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1.75em</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> -.<span class="number">15em</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">0.76em</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.button</span> <span class="class">.equivalent-symbol</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1.5em</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> -<span class="number">0.6em</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="class">.button</span> <span class="class">.equivalent-bar</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">1.5em</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="3-_Centering_Lists_to_the_Page">3. Centering Lists to the Page</h2>
+<h3 id="Challenge-2">Challenge</h3>
+<p>If you look at my result[^will link when I can] and compare it to the target, especially while resizing the browser window, you’ll notice that my list cards float to the left while the target image shows them centered, relative to the page.</p>
+<h3 id="Result-2">Result</h3>
+<p>I think this should be relatively simple operation, but it’s kickin’ my brain and I haven’t resolved it yet.</p>
+<p>Spent a study group trying to address this (including a fair bit of playing with <a href="http://the-echoplex.net/flexyboxes" target="_blank" rel="external">http://the-echoplex.net/flexyboxes</a>).   My “with flexbox” push is the result, but it still isn’t what I envision :-(   </p>
+<h2 id="4-_The_large,_outlined_“+”_graphic">4. The large, outlined “+” graphic</h2>
+<h3 id="Challenge-3">Challenge</h3>
+<p>Like the listo logo and icon, I took the the large, outlined “+” graphic in the “Create New List” box as a challenge.</p>
+<h3 id="Result-3">Result</h3>
+<p>Unlike the listo logo and icon, I couldn’t just mix and match existing glyphs, but it wasn’t for lack of trying.  The real challenge came with making three different glyph classes (one for the inner grey +, one for the middle white +, and one for the outer grey +) that had different and relative sizes, and then getting them to overlap properly.  I still haven’t resolved it yet.</p>
+<h2 id="5-_Responsive_Design">5. Responsive Design</h2>
+<h3 id="Challenge-4">Challenge</h3>
+<p>In this day and age, websites should be responsive and accessible across browsers.  Unfortunately, browser inconsistencies make developing such sites challenging!</p>
+<h3 id="Result-4">Result</h3>
+<p>In this case, getting the basic list boxes and the listo logo/icon to be responsive (to screen sizes) and accessible (to user-controlled zooming) took a fair bit of tweek-it time, but it didn’t require any super-special skills.</p>
+<p>Strangely, getting the link text (<code>class=&quot;button&quot;</code>) to right-align across browsers took some mental effort. (I think my very exhausted brain was confusing <code>flex</code> and <code>float</code>.)</p>
+<h1 id="Summary">Summary</h1>
+<p>This was a great exercise, and will probably be one I revisit as a CSS Kata (or would it be a Koan<a href="http://codekata.com/kata/kata-kumite-koan-and-dreyfus/" target="_blank" rel="external">^kata-vs-koan</a>).</p>
+<p>If anyone has suggestions on how I should tackle the centering of the list boxes or the grey and white plus graphic, I’d love to hear them!  </p>
+<p> [^will link when I can]: I’ll link as soon as I can.  Until then, the repo is at <a href="https://github.com/metasean/html-css-assessment" target="_blank" rel="external">https://github.com/metasean/html-css-assessment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/projects/DevMountain-Week-One/html-css-assessment/README.html" data-id="sqpxi3dwx9xjtdgj" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/projects/DevMountain-Week-One/html-css-assessment/README.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/-this/" style="font-size: 10.00px;">.this</a><a href="/tags/CSS3/" style="font-size: 10.00px;">CSS3</a><a href="/tags/DevMountain/" style="font-size: 20.00px;">DevMountain</a><a href="/tags/HTML5/" style="font-size: 10.00px;">HTML5</a><a href="/tags/Hexo/" style="font-size: 10.00px;">Hexo</a><a href="/tags/TDD-BDD/" style="font-size: 10.00px;">TDD/BDD</a><a href="/tags/callbacks/" style="font-size: 10.00px;">callbacks</a><a href="/tags/closures/" style="font-size: 10.00px;">closures</a><a href="/tags/colleagues/" style="font-size: 10.00px;">colleagues</a><a href="/tags/colophon/" style="font-size: 10.00px;">colophon</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/mentoring/" style="font-size: 10.00px;">mentoring</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/10/07/DevMountain-First-Quarter/">DevMountain - First Quarter</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/28/Welcome-to-MetaSean-s-Blog/">Welcome to MetaSean&#39;s Blog</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/27/DevMountain-Week-Two/">DevMountain - Week Two</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/20/DevMountain-Week-One/">DevMountain - Week One</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 MetaSean<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'metaseansblog';
+  
+  var disqus_url = 'http://metasean.github.io/projects/DevMountain-Week-One/html-css-assessment/README.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

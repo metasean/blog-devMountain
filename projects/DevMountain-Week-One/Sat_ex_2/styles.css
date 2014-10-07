@@ -1,0 +1,46 @@
+html, body {
+	width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.nav-top {
+	background: #000;
+	color: #fff;
+	width: 100%;
+	display: inline-flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 100px;
+	align-items: center; /* vertical */
+}
+
+.button {
+	padding: 10px 15px;
+	display: inline-block;
+}
+
+.button:hover {
+	background: #666;
+}
+
+.button:active {
+	background: #999;
+	transition: background 0.8s ease;
+}
+
+.main {
+	height: 500px;
+	width: 100%;
+	background: red;
+}
+
+@media (min-width: 533px) {
+	.main {
+		background: blue;
+	}
+
+	.nav-top {
+		flex-direction: row;
+	}
+}

@@ -1,0 +1,1 @@
+In this folder, create a simple jQuery app that has one button, and whenever the user clicks on that button the background of the page will change to any one of these four colors, red, blue, green, yellow.

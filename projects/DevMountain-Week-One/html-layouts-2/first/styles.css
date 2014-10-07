@@ -1,0 +1,95 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-color: #fff;
+}
+
+.header {
+	width: 100%;
+	height: 15%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	position: relative;
+}
+
+.box {
+	width: 31%;
+	height: 100%;
+	display: block;
+	float: left;
+}
+
+.red {
+	background: red;
+	margin-right: 1.5%;
+	margin-left: 1%;
+}
+
+.blue {
+	background: blue;
+	margin-right: 1%;
+	margin-left: 1%;
+}
+
+.grey {
+	background: gray;
+	margin-right: 1%;
+	margin-left: 1.5%;
+}
+
+.content {
+	width: 97%;
+/*	background: yellow; */
+	margin: 0 1.5% 2% 1.5%;
+	font-family: "Verdana", "sans-seriff";
+	font-size: 90%;
+	line-height: 150%;
+}
+
+.middle {
+	width: 37%;
+	margin: 0 0 2% 1.5%;
+	background: red;
+	height: 35%;
+}
+
+.middle-2 {
+	width: 60%;
+	margin: 0 1.5% 2% 0;
+	background: blue;
+	height: 35%;
+}
+
+.footer {
+	width: 100%;
+	height: 13%;
+	margin-bottom: 2%;
+	position: relative;
+	clear: both;
+}
+
+.footer-boxes-1 {
+	width: 60%;
+	height: 100%;
+	background: blue;
+	margin: 0 0 0 1.5%;
+	float: left;
+}
+
+.footer-boxes-2 {
+	width: 37%;
+	height: 100%;
+	background: red;
+	margin: 0 1.5% 0 0 ;
+	float: left;
+}
+
+.footer-boxes-3 {
+	width: 80%;
+	height:100%;
+	background: gray;
+	margin: 0 auto;
+	z-index: 1;
+	position: relative;
+}

@@ -1,0 +1,48 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.row {
+	width: 100%;
+	height: 15%;
+}
+
+.double-row {
+	width: 100%;
+	height: 25%;
+	padding: 2em;
+	font-family: "Arial", "sans-seriff";
+	box-sizing: border-box;
+}
+
+.box {
+	height: 80%;
+	width: 10%;
+	background: #528fe9;
+}
+
+.zero {
+	background: #bbb;
+}
+
+.content {
+	background: #fff;
+}
+
+.one {
+	background: #528fe9;
+}
+
+.two {
+	background: #6ee2bf;
+}
+
+.three {
+	background: #bfe974;
+}
+
+.four {
+	background: #e0e060;
+}

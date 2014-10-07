@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.bar {
+	width: 100%;
+}
+
+.main {
+	height: 80%;
+}
+
+.sidebar {
+	background-color: #ddd;
+	height: 100%;
+	width: 15%;
+	float: left;
+}
+
+.center {
+	float: left;
+	width: 70%;
+	height: 100%;
+	background: #fff;
+}
+
+.content {
+	height: 90%
+}
+
+header {
+	background-color: #333;
+	height: 20%;
+}
+
+footer {
+	background-color: #111;
+	height: 10%;
+}
