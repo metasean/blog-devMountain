@@ -3,32 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MetaSean</title>
+  <title>DevMountain - Week Five | MetaSean</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Use this repo as the starting point for the Twitter clone project:
-PART ONE
-
-Fork the repo
-Get familiar with the html/css
-Right before your closing body tag, link to your jQuery found in the js folder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MetaSean">
-<meta property="og:url" content="http://metasean.github.io/projects/DevMountain-First-Quarter/twitter-clone/README.html">
+  <meta name="description" content="This was another roller-coaster week of Angular.  One of the big dichotomies of the week was our variety of instructors.  In the end, I definitely felt like I learned a lot, but it’s largely an epheme">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DevMountain - Week Five">
+<meta property="og:url" content="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/">
 <meta property="og:site_name" content="MetaSean">
-<meta property="og:description" content="Use this repo as the starting point for the Twitter clone project:
-PART ONE
-
-Fork the repo
-Get familiar with the html/css
-Right before your closing body tag, link to your jQuery found in the js folder">
+<meta property="og:description" content="This was another roller-coaster week of Angular.  One of the big dichotomies of the week was our variety of instructors.  In the end, I definitely felt like I learned a lot, but it’s largely an epheme">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MetaSean">
-<meta name="twitter:description" content="Use this repo as the starting point for the Twitter clone project:
-PART ONE
-
-Fork the repo
-Get familiar with the html/css
-Right before your closing body tag, link to your jQuery found in the js folder">
+<meta name="twitter:title" content="DevMountain - Week Five">
+<meta name="twitter:description" content="This was another roller-coaster week of Angular.  One of the big dichotomies of the week was our variety of instructors.  In the end, I definitely felt like I learned a lot, but it’s largely an epheme">
 
   
     <link rel="alternative" href="/atom.xml" title="MetaSean" type="application/atom+xml">
@@ -80,84 +65,94 @@ Right before your closing body tag, link to your jQuery found in the js folder">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-DevMountain-Week-Five" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/projects/DevMountain-First-Quarter/twitter-clone/README.html" class="article-date">
-  <time datetime="2014-10-19T02:12:59.000Z" itemprop="datePublished">2014-10-18</time>
+    <a href="/2014/10/19/DevMountain-Week-Five/" class="article-date">
+  <time datetime="2014-10-19T06:00:00.000Z" itemprop="datePublished">2014-10-19</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DevMountain - Week Five
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
 
 
 
       
-        <p>Use this repo as the starting point for the Twitter clone project:</p>
-<h2 id="PART_ONE">PART ONE</h2>
+        <p>This was another roller-coaster week of Angular.  One of the big dichotomies of the week was our variety of instructors.  In the end, I definitely felt like I learned a lot, but it’s largely an ephemeral feeling with very little working code.</p>
+<a id="more"></a>
+
+
+<blockquote>
+
+<p>Action will remove the doubts that theory cannot solve.</p>
+<footer><strong>Tehyi Hsieh</strong></footer></blockquote>
+
+
+<h1 id="Overview">Overview</h1>
+<p>This was our second week of Angular.  Late last week we started falling behind the schedule; at the pace we’re moving, this would have been a problem all by itself.  To exacerbate that problem, we also had three different instructors over the four classes this week; none of the instructors appeared to know that we had fallen behind.</p>
+<p>The upshot of having three different instructors is that we got different perspectives, along with a plethora of styles, tips, and tricks.  The downside is we kept falling behind and we have less working code than normal to demonstrate.</p>
+<h1 id="Highlights">Highlights</h1>
+<p>A handful of the cool things we learned about:</p>
 <ul>
-<li>Fork the repo</li>
-<li>Get familiar with the html/css</li>
-<li>Right before your closing body tag, link to your jQuery found in the js folder.</li>
-<li>Create a animations.js file and then link to it right before your the closing body tag</li>
-<li>Use jQuery to add the following features:<ul>
-<li>Initially, the Tweet button and the character count button should be hidden (CSS).</li>
-<li>When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed.</li>
-<li>As the user types, the character count should decrease.</li>
-<li>When there are 10 or less characters, the character counter should turn red.</li>
-<li>If the user puts in more than 140 characters, the tweet button should be disabled (and re-enabled when there are &lt;= 140 chars).</li>
-<li>When the user successfully inputs characters and clicks the “Tweet” button, a new tweet should be created and added to the tweet stream in the main column, using the user’s fake profile image in the top left and username/fullname.</li>
+<li>We can use <code>.map</code> to run a function on each element in an array.  </li>
+<li>Angular’s <code>$http</code> <em>is</em> a promise, therefore we don’t need to use <code>$q</code> with it.  </li>
+<li>We learned about the JavaScript “event loop” and the Angular “digest loop”.  (Knowing about the JavaScript “event loop” earlier, particularly before working with jQuery, would have been useful!)  </li>
+<li>Decrementing loops.  (When Chris wrote code with this, my mind first did a ‘huh’, and a split second later I realized what it was doing, and was blown away by the sheer elegance!  Unfortunately, it appears to be far less elegant when performance is considered, e.g., <a href="http://jsperf.com/yet-another-js-loop-comparison/2#bs-chart" target="_blank" rel="external">http://jsperf.com/yet-another-js-loop-comparison/2#bs-chart</a>)  </li>
 </ul>
-</li>
-</ul>
-<h2 id="PART_TWO">PART TWO</h2>
+<h1 id="Results">Results</h1>
+<p>Most of the projects this week require a running server to view, so I’m linking directly to GitHub source code instead of a working demonstration of the page</p>
 <ul>
-<li>The tweet actions (Reply, Retweet, etc) should only show up when you hover over that individual tweet. Otherwise, they should be hidden.</li>
-<li>The Retweets/timestamp/Reply areas should also be hidden by default. These should only expand if you click on the tweet. Have the students use a jQuery animation to accomplish the reveal, similar to how it’s done on Twitter.com</li>
-</ul>
-<h3 id="ADVANCED:_(Black_Diamond)">ADVANCED: (Black Diamond)</h3>
-<ul>
-<li>Make timestamps similar to how they look on Twitter (1h, 18m, 1m) and use the jQuery timeago plugin to make them automatic.</li>
-<li>Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet.</li>
-<li>Implement the Bootstrap tooltips for when you hover over a user’s avatar image</li>
-<li>Persist new tweets using local storage</li>
-<li>Persist new tweets using a service like parse <a href="https://parse.com/" target="_blank" rel="external">https://parse.com/</a></li>
-</ul>
-<h3 id="Here’s_a_list_of_(in_my_opinion)_the_jQuery_‘Need_to_Knows’">Here’s a list of (in my opinion) the jQuery ‘Need to Knows’</h3>
-<ul>
-<li>$(document).ready(function(){});</li>
-<li>$(“element”)</li>
-<li>$(‘‘idOrClass”)</li>
-<li>$(“idOrClass, idOrClass”)</li>
-<li>var myNameEle = $(‘\<span>Tyler McGinnis \</span>’)</li>
-<li>$(‘idOrClass’).prepend(myNameEle);</li>
-<li>$(‘idOrClass’).append(myNameEle) / myNameEle.$appendTo($(‘idOrClass’))</li>
-<li>$(‘idOrClass’).remove();</li>
-<li>$(‘idOrClass’).on(‘\<event>’, function(){}); <a href="http://api.jquery.com/category/events/" target="_blank" rel="external">http://api.jquery.com/category/events/</a></event></li>
-<li>$(this)</li>
-<li>$(‘idOrClass’).val() //input, textarea, select</li>
-<li>$(‘idOrClass’).html()</li>
-<li>$(‘idOrClass’).css()</li>
-<li>$(‘idOrClass’).text()</li>
-<li>$(‘idOrClass’).find()</li>
-<li>$(‘idOrClass’).show() // .hide();</li>
-<li>$(this).toggleClass(‘className’);</li>
+<li><a href="https://github.com/metasean/itunes-api" target="_blank">itunes-api</a><br>: mostly working</li>
+<li><a href="https://github.com/metasean/angular-routes" target="_blank">angular-routes</a><br>: mostly working  </li>
+<li><a href="https://github.com/metasean/nba-routes" target="_blank">nba-routes</a><br>: mostly not working</li>
+<li><a href="https://github.com/metasean/directives-work" target="_blank">directive-work</a><br>: mostly not working</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/projects/DevMountain-First-Quarter/twitter-clone/README.html" data-id="pp0r3lbu2sturcax" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/" data-id="16czy6jbze1zldw6" class="article-share-link">Share</a>
       
-        <a href="http://metasean.github.io/projects/DevMountain-First-Quarter/twitter-clone/README.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevMountain/">DevMountain</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2014/10/20/Project-Introductions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Project Introductions
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/10/15/Promises-and-q/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Promises and $q</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -239,7 +234,7 @@ Right before your closing body tag, link to your jQuery found in the js folder">
 <script>
   var disqus_shortname = 'metaseansblog';
   
-  var disqus_url = 'http://metasean.github.io/projects/DevMountain-First-Quarter/twitter-clone/README.html';
+  var disqus_url = 'http://metasean.github.io/2014/10/19/DevMountain-Week-Five/';
   
   (function(){
     var dsq = document.createElement('script');
