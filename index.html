@@ -16,8 +16,6 @@
 <meta name="twitter:description">
 
   
-    <link rel="alternative" href="/atom.xml" title="MetaSean" type="application/atom+xml">
-  
   
     <link rel="icon" href="../../source/images/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
   
@@ -55,8 +53,6 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
@@ -68,12 +64,182 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ATM-Angular-Module-Order-of-Injection" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/" class="article-date">
+  <time datetime="2014-10-27T06:00:03.000Z" itemprop="datePublished">2014-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/all-the-mistakes/">all the mistakes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/">ATM: Angular Module -  Order of Injection</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <p>Once I had identified and dealt with the definition versus loading problem, I had a short but productive streak, only to come to a complete halt because of another cryptic problem.  While the definition versus loading problem is an obvious mistake (albeit easy to make, easy to overlook, and hard to diagnose), my next cryptic problem was not one that I, or the senior programmers that were kindly helping me, even knew to look for.</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/#more">Read More ...</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/2014/10/27/ATM-Angular-Module-Order-of-Injection/" data-id="o1ssm6xw1rzo0bzl" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/2014/10/27/ATM-Angular-Module-Order-of-Injection/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ATM/">ATM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DI/">DI</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ATM-Angular-Module-Definition-vs-Loading" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/" class="article-date">
+  <time datetime="2014-10-27T06:00:02.000Z" itemprop="datePublished">2014-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/all-the-mistakes/">all the mistakes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/">ATM: Angular Module -  Definition vs Loading</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <p>Angular uses a very similar statement to define a new module and to load an existing module.  For example, the initial definition for my stage-hand app was:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="reserved">var</span> shApp = angular.<span class="built_in">module</span>(<span class="string">'shApp'</span>, []);</div></pre></td></tr></table></figure>
+
+<p>While the statement to load my stage-hand module (e.g., at the beginning of the controller and service files) was:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="reserved">var</span> shApp = angular.<span class="built_in">module</span>(<span class="string">'shApp'</span>)</div></pre></td></tr></table></figure>
+
+<p>Note that the only differences are <code>, []</code> and <code>;</code>, so it’s easy to make a mistake.</p>
+<p>To make matters worse, the symptoms were really cryptic.</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/#more">Read More ...</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/" data-id="6ld52vkwew80eep6" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ATM/">ATM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/modules/">modules</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-all-the-mistakes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/27/all-the-mistakes/" class="article-date">
+  <time datetime="2014-10-27T06:00:01.000Z" itemprop="datePublished">2014-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/all-the-mistakes/">all the mistakes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/27/all-the-mistakes/">All The Mistakes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <p>While starting my stage-hand project I ran into several ‘black box’ problems.  After spending a frustratingly inordinate amount of time ripping code apart, I was able to identify two separate problems.  One was an easy to make mistake that I thought I had checked for early in the debugging process.  The other problem didn’t make any sense at all, but thankfully I stumbled across an explanation that made a load of sense.</p>
+
+        
+          <p class="article-more-link">
+            <a href="/2014/10/27/all-the-mistakes/#more">Read More ...</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/2014/10/27/all-the-mistakes/" data-id="uzd17i4bcgylz1ci" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/2014/10/27/all-the-mistakes/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevMountain/">DevMountain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/atm/">atm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning/">learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lessons-learned/">lessons learned</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Code-friendly-Notetaking-in-Sublime-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/26/Code-friendly-Notetaking-in-Sublime-2/" class="article-date">
   <time datetime="2014-10-26T06:00:00.000Z" itemprop="datePublished">2014-10-26</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -103,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/26/Code-friendly-Notetaking-in-Sublime-2/" data-id="jj8p11kj3159oilm" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/26/Code-friendly-Notetaking-in-Sublime-2/" data-id="j8as57899msotz91" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/26/Code-friendly-Notetaking-in-Sublime-2/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -123,6 +289,10 @@
   <time datetime="2014-10-25T06:00:00.000Z" itemprop="datePublished">2014-10-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -152,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/25/DevMountain-First-Half/" data-id="imjipyhl7z21a49a" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/25/DevMountain-First-Half/" data-id="2p9wpc3hbdiee1j0" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/25/DevMountain-First-Half/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -172,6 +342,10 @@
   <time datetime="2014-10-20T06:00:00.000Z" itemprop="datePublished">2014-10-20</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Projects/">Projects</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -202,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/20/Project-Introductions/" data-id="ua1c6vvz3olg3juq" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/20/Project-Introductions/" data-id="pf2gll28zpzq61rp" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/20/Project-Introductions/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -222,6 +396,10 @@
   <time datetime="2014-10-19T06:00:00.000Z" itemprop="datePublished">2014-10-19</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -251,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/" data-id="ceuvb319wyq8ibgr" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/" data-id="v0iy6jmo2uglk85w" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/19/DevMountain-Week-Five/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -300,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/15/Promises-and-q/" data-id="9bv7o0fkw16nxryu" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/15/Promises-and-q/" data-id="9823yagabdo566v6" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/15/Promises-and-q/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -320,6 +498,10 @@
   <time datetime="2014-10-12T21:56:01.000Z" itemprop="datePublished">2014-10-12</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -351,7 +533,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/12/DevMountain-Week-Four/" data-id="hoijkfu53k1pjood" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/12/DevMountain-Week-Four/" data-id="6nv65ujrrm89r6q1" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/12/DevMountain-Week-Four/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -371,6 +553,10 @@
   <time datetime="2014-10-07T06:00:00.000Z" itemprop="datePublished">2014-10-07</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -400,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/10/07/DevMountain-First-Quarter/" data-id="qx66in91v8o3j8yj" class="article-share-link">Share</a>
+      <a data-url="http://metasean.github.io/2014/10/07/DevMountain-First-Quarter/" data-id="25b7kr1ggch4ab3y" class="article-share-link">Share</a>
       
         <a href="http://metasean.github.io/2014/10/07/DevMountain-First-Quarter/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -414,168 +600,29 @@
 
 
   
-    <article id="post-Welcome-to-MetaSean-s-Blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/09/28/Welcome-to-MetaSean-s-Blog/" class="article-date">
-  <time datetime="2014-09-28T06:00:00.000Z" itemprop="datePublished">2014-09-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/28/Welcome-to-MetaSean-s-Blog/">Welcome to MetaSean&#39;s Blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-
-
-
-      
-        <p>Hello and welcome to MetaSean’s Blog!</p>
-<p>This blog is primarily to document my journeys through the lands of JavaScript, but I’m sure I’ll occasionally deviate.</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/28/Welcome-to-MetaSean-s-Blog/#more">Read More ...</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/09/28/Welcome-to-MetaSean-s-Blog/" data-id="1ue6djvg3mvtlvwe" class="article-share-link">Share</a>
-      
-        <a href="http://metasean.github.io/2014/09/28/Welcome-to-MetaSean-s-Blog/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/colophon/">colophon</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-DevMountain-Week-Two" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/09/27/DevMountain-Week-Two/" class="article-date">
-  <time datetime="2014-09-27T06:00:00.000Z" itemprop="datePublished">2014-09-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/27/DevMountain-Week-Two/">DevMountain - Week Two</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-
-
-
-      
-        <p>Last week was our only week on html and css.  The first three lectures this week felt like excessively redundant reviews of the pre-course work material.  (Just to be clear, I’m not saying that <a href="https://github.com/trevordmiller" target="_blank" rel="external">Trevor</a> or Jake’s presentations were bad!)  The exercises that accompanied those lesson were much more useful as refreshers.  </p>
-<p>But then we hit the <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/" target="_blank" rel="external">callback homework</a> and <a href="https://github.com/DevMountain/war" target="_blank" rel="external">Saturday morning’s exercise</a>!</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/27/DevMountain-Week-Two/#more">Read More ...</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/09/27/DevMountain-Week-Two/" data-id="race77y1ba8a6szp" class="article-share-link">Share</a>
-      
-        <a href="http://metasean.github.io/2014/09/27/DevMountain-Week-Two/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/-this/">.this</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevMountain/">DevMountain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/callbacks/">callbacks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/closures/">closures</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-DevMountain-Week-One" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/09/20/DevMountain-Week-One/" class="article-date">
-  <time datetime="2014-09-20T06:00:00.000Z" itemprop="datePublished">2014-09-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/20/DevMountain-Week-One/">DevMountain - Week One</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-
-
-
-      
-        <p>Between homework, classwork, job, and just life in general, there won’t be a lot of time to do recaps.  Regardless, I’m going to try to knock out an entry each week. It will probably be quick and dirty, with lots of room for improvement, but it will be better than nothing. :-)</p>
-<p>Week one was spent, with <a href="https://github.com/cahlan" target="_blank" rel="external">Cahlan</a> and <a href="https://github.com/emersive" target="_blank" rel="external">Britton</a>, covering the fundamentals of git, Github, HTML5, and CSS, and slightly beyond fundamental CSS.  Most of our exercises focused on writing the HTML and CSS files for webpage mock-ups.  My favorite exercise was definitely the last one.</p>
-
-        
-          <p class="article-more-link">
-            <a href="/2014/09/20/DevMountain-Week-One/#more">Read More ...</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://metasean.github.io/2014/09/20/DevMountain-Week-One/" data-id="x8kz98673mukww32" class="article-share-link">Share</a>
-      
-        <a href="http://metasean.github.io/2014/09/20/DevMountain-Week-One/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevMountain/">DevMountain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevMountain/">DevMountain</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Projects/">Projects</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/all-the-mistakes/">all the mistakes</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/-q/" style="font-size: 10.00px;">$q</a><a href="/tags/-this/" style="font-size: 10.00px;">.this</a><a href="/tags/Angular/" style="font-size: 15.00px;">Angular</a><a href="/tags/BOM/" style="font-size: 10.00px;">BOM</a><a href="/tags/CSS3/" style="font-size: 10.00px;">CSS3</a><a href="/tags/DevMountain/" style="font-size: 20.00px;">DevMountain</a><a href="/tags/HTML5/" style="font-size: 10.00px;">HTML5</a><a href="/tags/Hexo/" style="font-size: 10.00px;">Hexo</a><a href="/tags/MVW/" style="font-size: 10.00px;">MVW</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node/" style="font-size: 10.00px;">Node</a><a href="/tags/Promises/" style="font-size: 10.00px;">Promises</a><a href="/tags/Sublime/" style="font-size: 10.00px;">Sublime</a><a href="/tags/TDD-BDD/" style="font-size: 10.00px;">TDD/BDD</a><a href="/tags/callbacks/" style="font-size: 10.00px;">callbacks</a><a href="/tags/closures/" style="font-size: 10.00px;">closures</a><a href="/tags/cohort-io/" style="font-size: 10.00px;">cohort.io</a><a href="/tags/colleagues/" style="font-size: 10.00px;">colleagues</a><a href="/tags/colophon/" style="font-size: 10.00px;">colophon</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/mentoring/" style="font-size: 10.00px;">mentoring</a><a href="/tags/meta-mark/" style="font-size: 10.00px;">meta-mark</a><a href="/tags/stage-hand/" style="font-size: 10.00px;">stage-hand</a><a href="/tags/trek/" style="font-size: 10.00px;">trek</a>
+      <a href="/tags/-q/" style="font-size: 10.00px;">$q</a><a href="/tags/-this/" style="font-size: 10.00px;">.this</a><a href="/tags/ATM/" style="font-size: 13.33px;">ATM</a><a href="/tags/Angular/" style="font-size: 16.67px;">Angular</a><a href="/tags/BOM/" style="font-size: 10.00px;">BOM</a><a href="/tags/CSS3/" style="font-size: 10.00px;">CSS3</a><a href="/tags/DI/" style="font-size: 10.00px;">DI</a><a href="/tags/DevMountain/" style="font-size: 20.00px;">DevMountain</a><a href="/tags/HTML5/" style="font-size: 10.00px;">HTML5</a><a href="/tags/Hexo/" style="font-size: 10.00px;">Hexo</a><a href="/tags/JavaScript/" style="font-size: 10.00px;">JavaScript</a><a href="/tags/MVW/" style="font-size: 10.00px;">MVW</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node/" style="font-size: 10.00px;">Node</a><a href="/tags/Promises/" style="font-size: 10.00px;">Promises</a><a href="/tags/Sublime/" style="font-size: 10.00px;">Sublime</a><a href="/tags/TDD-BDD/" style="font-size: 10.00px;">TDD/BDD</a><a href="/tags/atm/" style="font-size: 10.00px;">atm</a><a href="/tags/callbacks/" style="font-size: 10.00px;">callbacks</a><a href="/tags/closures/" style="font-size: 10.00px;">closures</a><a href="/tags/cohort-io/" style="font-size: 10.00px;">cohort.io</a><a href="/tags/colleagues/" style="font-size: 10.00px;">colleagues</a><a href="/tags/colophon/" style="font-size: 10.00px;">colophon</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/learning/" style="font-size: 10.00px;">learning</a><a href="/tags/lessons-learned/" style="font-size: 10.00px;">lessons learned</a><a href="/tags/mentoring/" style="font-size: 10.00px;">mentoring</a><a href="/tags/meta-mark/" style="font-size: 10.00px;">meta-mark</a><a href="/tags/modules/" style="font-size: 10.00px;">modules</a><a href="/tags/stage-hand/" style="font-size: 10.00px;">stage-hand</a><a href="/tags/trek/" style="font-size: 10.00px;">trek</a>
     </div>
   </div>
 
@@ -587,23 +634,23 @@
       <ul>
         
           <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/">ATM: Angular Module -  Order of Injection</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/">ATM: Angular Module -  Definition vs Loading</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/all-the-mistakes/">All The Mistakes</a>
+          </li>
+        
+          <li>
             <a href="/2014/10/26/Code-friendly-Notetaking-in-Sublime-2/">Code-friendly Notetaking in Sublime 2</a>
           </li>
         
           <li>
             <a href="/2014/10/25/DevMountain-First-Half/">DevMountain First Half</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/20/Project-Introductions/">Project Introductions</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/19/DevMountain-Week-Five/">DevMountain - Week Five</a>
-          </li>
-        
-          <li>
-            <a href="/2014/10/15/Promises-and-q/">Promises and $q</a>
           </li>
         
       </ul>
@@ -615,7 +662,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
