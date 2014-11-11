@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git remote set-url | MetaSean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is for all my DevMountain cohort members - compare your GitHub Contributions graphic (i.e. github.com/your_username) to mine - https://github.com/metasean .  See all those greenish blocks on the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git remote set-url">
+<meta property="og:url" content="http://metasean.github.io/2014/11/11/git-remote-set-url/">
+<meta property="og:site_name" content="MetaSean">
+<meta property="og:description" content="This is for all my DevMountain cohort members - compare your GitHub Contributions graphic (i.e. github.com/your_username) to mine - https://github.com/metasean .  See all those greenish blocks on the">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git remote set-url">
+<meta name="twitter:description" content="This is for all my DevMountain cohort members - compare your GitHub Contributions graphic (i.e. github.com/your_username) to mine - https://github.com/metasean .  See all those greenish blocks on the">
+
+  
+  
+    <link rel="icon" href="../../source/images/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
+  
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Short+Stack|Kalam' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MetaSean</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">tales from a JS Craftsman in the making</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/About">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://metasean.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git-remote-set-url" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/11/git-remote-set-url/" class="article-date">
+  <time datetime="2014-11-11T07:00:00.000Z" itemprop="datePublished">2014-11-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tips-n-tricks/">tips-n-tricks</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git remote set-url
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <p>This is for all my DevMountain cohort members - compare your GitHub Contributions graphic (i.e. github.com/your_username) to mine - <a href="https://github.com/metasean" target="_blank" rel="external">https://github.com/metasean</a> .  See all those greenish blocks on the right-hand side of my contributions graphic?  If you don’t have a lot of those green blocks, then this post is for you!</p>
+<a id="more"></a>
+
+<h1 id="Background">Background</h1>
+<p>First, some background.  In my opinion, if you make a git commit and push it to GitHub, then I think you should automatically get credit for it.  Unfortunately, if you did a fork of someone else’s project then - by default - you don’t get credit for it on GitHub. The good news is twofold - first, it’s easy to get credit for a repo; second, you get credit based on the date of the <code>git commit</code> <em>not</em> the day you push it to GitHub.  <strong><em>So, if you’ve done git commits on a somewhat regular basis, you can retroactively fill in your contributions graphic! :-)</em></strong></p>
+<p>The key to getting credit is to:</p>
+<ol>
+<li>Manually create a new repo from your GitHub account.</li>
+<li>Run the command <code>git remote set-url origin</code> plus the new repo’s url (use the ssh version if you have it set up) to reset your local git repository’s origin to <em>your</em> new GitHub repo.</li>
+<li><code>git add</code>, <code>git commit</code>, and <code>git push</code> as you normally would.</li>
+</ol>
+<h1 id="Bonus_Tip:_gh-pages">Bonus Tip: <code>gh-pages</code></h1>
+<p>If your repo contains just html, css, and vanilla javascript (i.e., it doesn’t require a database backend or server of any sort), then you can create a <code>gh-pages</code> branch and link directly to the rendered result.  </p>
+<p> For example, week one we worked on html and css challenges.  A standard GitHub link for the html of our ‘html-css-assessment’ project would lead you to a page like - <a href="https://github.com/metasean/html-css-assessment/blob/master/index.html" target="_blank" rel="external">https://github.com/metasean/html-css-assessment/blob/master/index.html</a>. <em>BUT</em>, by making a partner <code>gh-pages</code> branch I can link to a version that renders my page as html instead of just showing the raw html - <a href="http://metasean.github.io/html-css-assessment/index.html" target="_blank" rel="external">http://metasean.github.io/html-css-assessment/index.html</a>.</p>
+<p> Note the url diffences:</p>
+<ul>
+<li>standard GitHub link (i.e. shows the source code):<br>   <code>https://github.com/username/repo_name/path/to/file.ext</code></li>
+<li>‘gh-pages’ link (i.e. rendered result of a non-server html page):<br>   <code>http://username.github.io/repo_name/file.ext</code></li>
+</ul>
+<h1 id="Cheatsheet">Cheatsheet</h1>
+<p>With the background out of the way, the following ‘cheatsheet’ should help you rapidly update your own GitHub repos, so that you get more GitHub credit for your hardwork!</p>
+<ol>
+<li>From your GitHub account, create a new repo.</li>
+<li><code>git remote set-url origin git://new.url.here</code><br>Replace <code>git://new.url.here</code> with the GitHub generated link.<br>This is the magic sauce command ;-)<br>If you’ve already done your <code>add</code>s and <code>commit</code>s, you can skip straight to step 5!</li>
+<li><code>git add .</code><br>Remember that <code>git add .</code> will add <em>everything</em> in the directory that isn’t listed in the ‘.gitignore’ file, so adjust this command as appropriate for your needs</li>
+<li><code>git commit -a -m &quot;commit message&quot;</code><br>Commit all the modified and added files.  Obviously, adjust the commit message as appropriate.</li>
+<li><code>git push origin master</code><br>Push to the new origin repo.</li>
+<li><code>git checkout -b gh-pages</code><br>Create, and move to, a new ‘gh-pages’ branch.</li>
+<li><code>git push origin gh-pages</code><br>Push to the ‘gh-pages’ branch.</li>
+</ol>
+<h1 id="Results">Results</h1>
+<p>If you’ve been making somewhat regular git commits, but haven’t been getting your GitHub credit, a few minutes of setting ‘git remotes’ and pushing to the new origin.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/2014/11/11/git-remote-set-url/" data-id="aalzja9z7xfwkdp5" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/2014/11/11/git-remote-set-url/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tips-n-tricks/">tips-n-tricks</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/11/08/DevMountain-Week-Seven/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DevMount - Week Seven</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevMountain/">DevMountain</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Projects/">Projects</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/all-the-mistakes/">all the mistakes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tips-n-tricks/">tips-n-tricks</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/-q/" style="font-size: 10.00px;">$q</a><a href="/tags/-this/" style="font-size: 10.00px;">.this</a><a href="/tags/ATM/" style="font-size: 15.00px;">ATM</a><a href="/tags/Angular/" style="font-size: 17.50px;">Angular</a><a href="/tags/BOM/" style="font-size: 10.00px;">BOM</a><a href="/tags/CSS3/" style="font-size: 10.00px;">CSS3</a><a href="/tags/DI/" style="font-size: 10.00px;">DI</a><a href="/tags/DevMountain/" style="font-size: 20.00px;">DevMountain</a><a href="/tags/Express/" style="font-size: 10.00px;">Express</a><a href="/tags/HTML5/" style="font-size: 10.00px;">HTML5</a><a href="/tags/Hexo/" style="font-size: 10.00px;">Hexo</a><a href="/tags/JavaScript/" style="font-size: 10.00px;">JavaScript</a><a href="/tags/MVW/" style="font-size: 10.00px;">MVW</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/MongoDB/" style="font-size: 10.00px;">MongoDB</a><a href="/tags/MySQL/" style="font-size: 10.00px;">MySQL</a><a href="/tags/Node/" style="font-size: 12.50px;">Node</a><a href="/tags/Promises/" style="font-size: 10.00px;">Promises</a><a href="/tags/Sublime/" style="font-size: 10.00px;">Sublime</a><a href="/tags/TDD-BDD/" style="font-size: 10.00px;">TDD/BDD</a><a href="/tags/atm/" style="font-size: 10.00px;">atm</a><a href="/tags/callbacks/" style="font-size: 10.00px;">callbacks</a><a href="/tags/closures/" style="font-size: 10.00px;">closures</a><a href="/tags/cohort-io/" style="font-size: 10.00px;">cohort.io</a><a href="/tags/colleagues/" style="font-size: 10.00px;">colleagues</a><a href="/tags/colophon/" style="font-size: 10.00px;">colophon</a><a href="/tags/databases/" style="font-size: 10.00px;">databases</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/learning/" style="font-size: 10.00px;">learning</a><a href="/tags/lessons-learned/" style="font-size: 10.00px;">lessons learned</a><a href="/tags/mentoring/" style="font-size: 10.00px;">mentoring</a><a href="/tags/meta-mark/" style="font-size: 10.00px;">meta-mark</a><a href="/tags/modules/" style="font-size: 12.50px;">modules</a><a href="/tags/stage-hand/" style="font-size: 10.00px;">stage-hand</a><a href="/tags/tips-n-tricks/" style="font-size: 10.00px;">tips-n-tricks</a><a href="/tags/trek/" style="font-size: 10.00px;">trek</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/11/11/git-remote-set-url/">git remote set-url</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/08/DevMountain-Week-Seven/">DevMount - Week Seven</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/01/ATM-Object-Object-has-no-method-find/">ATM: &quot;Object #&lt;Object&gt; has no method &#39;find&#39;&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/">ATM: Angular Module -  Order of Injection</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/">ATM: Angular Module -  Definition vs Loading</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 MetaSean<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/About" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'metaseansblog';
+  
+  var disqus_url = 'http://metasean.github.io/2014/11/11/git-remote-set-url/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

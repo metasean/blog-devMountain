@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>DevMount - Week Seven | MetaSean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Last week our focus was on databases.  
+Databases hold a special place in my heart.  When I was on active duty, one of my jobs was to create a Lotus Approach database to replace a mainframe database.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DevMount - Week Seven">
+<meta property="og:url" content="http://metasean.github.io/2014/11/08/DevMountain-Week-Seven/">
+<meta property="og:site_name" content="MetaSean">
+<meta property="og:description" content="Last week our focus was on databases.  
+Databases hold a special place in my heart.  When I was on active duty, one of my jobs was to create a Lotus Approach database to replace a mainframe database.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DevMount - Week Seven">
+<meta name="twitter:description" content="Last week our focus was on databases.  
+Databases hold a special place in my heart.  When I was on active duty, one of my jobs was to create a Lotus Approach database to replace a mainframe database.">
+
+  
+  
+    <link rel="icon" href="../../source/images/d97ea3132ed3652bd4658a5a7ec6ce84.ico">
+  
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Short+Stack|Kalam' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MetaSean</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">tales from a JS Craftsman in the making</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/About">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://metasean.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-DevMountain-Week-Seven" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/08/DevMountain-Week-Seven/" class="article-date">
+  <time datetime="2014-11-08T07:00:00.000Z" itemprop="datePublished">2014-11-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevMountain/">DevMountain</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DevMount - Week Seven
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+
+
+
+      
+        <p>Last week our focus was on databases.  </p>
+<p>Databases hold a special place in my heart.  When I was on active duty, one of my jobs was to create a Lotus Approach database to replace a mainframe database.  Long story short, I ended up entering my current profession primarily because of the power I saw in databases (at least, that’s how I would have described it at the time, now I’d describe it more as ‘the power of big data’).</p>
+<a id="more"></a>
+
+
+<blockquote>
+
+<p>Data! Data! Data! I can’t make bricks without clay!</p>
+<footer><strong>Sir Arthur Conan Doyle</strong></footer></blockquote>
+
+
+<h1 id="Background">Background</h1>
+<p>Before I go on, I’d like to apologize to my readers who have patiently waited for last week’s update.  I normally start drafting right after class on Saturday afternoon, have a completed draft before going to sleep Saturday, and then will polish it on Sunday or Monday, with the goal to have it officially posted before the start of Tuesday’s class.  This weekend, I started tackling a new project and was so focused on that, that I completely forgot to do an entry about last week.  But, the project itself involved some related information, so I think this post will be a bit better for the wait.</p>
+<p>The job I mentioned earlier involved learning about databases pretty much by myself, without the internet, and without any books [<a href="#" title="(no link) The actual software was packaged with a manual, but the wisdom of our IT department insisted they install the software on my computer and then take the entire install package (i.e. disks, book, and box) with them.">1</a>] (it was the mid-90’s and I was on a Marine Corps base in Okinawa, Japan; we thought we were the bomb because we had email addresses!).  My dad had a little bit of database knowledge, so he was able to explain relational databases, and in particular, why they were important, but other than that my sole resource was the very, <em>very, <strong>very</strong></em> sparse help documentation within Lotus Approach.  Since my time in the Marine Corps, I’ve done one other <em>massive</em> database project (that project was in Microsoft Access, but it pushed the limits of Microsoft Access [<a href="#" title="(no link) The system I developed was extremely successful, but because it started to exceed the limits of MicroSoft Access, it was replaced a few years later with on Oracle-driven application.">2</a>]).  I have to admit, knowing what I know about SQL[<a href="#" title="(no link) Structured Query Language">3</a>], I was really curious about how DevMountain was going to tackle both SQL and noSQL databases in a week!</p>
+<p>Coming into last week’s lessons, I was extremely rusty with SQL and had never worked with a noSQL database.  We ended up spending Tuesday and Wednesday evenings with MySQL and Thursday and Saturday with MongoDB.  I have to admit, for four days we covered a fair bit of ground.</p>
+<h1 id="MySQL">MySQL</h1>
+<p>Ian Platter was our SQL instructor, and I have to admit that I was really impressed with how much he was able to cover in six hours!  In my opinion, the sole failing was the complete lack of coverage of the ‘relational’ aspects of SQL databases.  It’s something that I know I struggled with a lot when I was learning Lotus Approach, and it’s something that I think is absolutely critical to really understanding SQL.</p>
+<p>Because of my previous experiences and understanding of relational databases, when I first heard about noSQL databases I wondered how in the world they could compete with the performance of SQL databases.  But to truly grasp the benefits of SQL, one really has to understand the ‘relational’ aspect of SQL databases.</p>
+<p>At the end of the week, we were asked which we felt more comfortable with - MySQL or MongoDB.  If you had asked me before the week started what I thought the response would be, I would have bet on noSQL.  In fact, Ian did such a phenomenal job covering MySQL that it won the student vote by a very large majority!</p>
+<h1 id="MongoDB">MongoDB</h1>
+<p>Britton was our MongoDB guide, and he started off pretty solid, but it’s clear that HTML5 and CSS3 are his domain and passion.  This is not to say he did a bad job.  In fact, he covered MongoDB enough that I was able to start hacking on a new project using it this weekend.  (So it’s his fault this post is late!)</p>
+<h1 id="Results">Results</h1>
+<p>Like the past few weeks, a couple of the projects this week require a running server to view, the others are more of a task-command listing, so I’m linking directly to GitHub source code instead of a working demonstration of the page.  For the task-command listings, I’m also including the tasks and my commands.</p>
+<h2 id="MySql">MySql</h2>
+<ul>
+<li><p><a href="https://github.com/metasean/sql-practice" target="_blank">sql-practice</a><br>Use a MySQL Client Query window to complete the following tasks:</p>
+<ol>
+<li>Add a column to represent when this post was created<br><code>ALTER TABLE posts ADD createdAt DATE;</code></li>
+<li>Add a column to represent what the current status is of the post (draft, publish, archive)<br><code>ALTER TABLE posts ADD status VARCHAR(10);</code></li>
+<li>Add a column to represent the number of views this post has received<br><code>ALTER TABLE posts ADD views FLOAT;</code></li>
+<li>Add a column to represent the subtitle for this post ALTER TABLE posts<br><code>ADD subtitle VARCHAR(50);</code></li>
+<li>Insert a published post created yesterday with a title and body of your choosing<br><code>INSERT INTO posts (title, body, createdAt, status) VALUES (&quot;Hello world&quot;, &quot;Welcome to SQL&quot;, &#39;2014-10-27&#39;, &#39;published&#39;);</code></li>
+<li>Insert a published post created last Tuesday with 100 views and a title/body of your choosing<br><code>INSERT INTO posts (title, body, createdAt, status, views) VALUES (&quot;Hello galaxy&quot;, &quot;See Sean rock SQL&quot;, &#39;published&#39;, &#39;2014-10-21&#39;, 100);</code></li>
+<li>Insert a post created today (now) that is a draft and a title/body of your choosing<br><code>INSERT INTO posts (title, body, createdAt, status) VALUES (&quot;Now&quot;, &quot;seize the now!&quot;, NOW(), &#39;draft&#39;);</code></li>
+<li>Select all posts that are published<br><code>SELECT * from posts WHERE status=&#39;published&#39;;</code></li>
+<li>Select the post with id = 2<br><code>SELECT * from posts WHERE id=&#39;2&#39;;</code></li>
+<li>Select all posts that have more than 1 view<br><code>SELECT * from posts WHERE views&gt;1;</code></li>
+<li>(Black Diamond) Select all posts that were made in the last two days<br><code>SELECT * from posts WHERE createdAt&gt;DATE_SUB(NOW(), INTERVAL 2 DAY);</code></li>
+</ol>
+</li>
+<li><a href="https://github.com/metasean/lawyer-scoreboard" target="_blank">lawyer-scoreboard</a><br>: Angular front-end pulling in MySQL data</li>
+</ul>
+<h2 id="noSQL">noSQL</h2>
+<ul>
+<li><p><a href="https://github.com/metasean/mongodb-practice" target="_blank">mongodb-practice</a><br>You’re creating a database for a small-time CRM (Customer Relationship Management) system.</p>
+<ol>
+<li>You’re creating a database for a small-time CRM (Customer Relationship Management) system.<br>Create a collection of customers.<ol>
+<li>Add a new customer with a business_name of Acme, num_employees of 1200, account_value of 50000<br><code>db.customers.insert({business_name: &quot;Acme&quot;, num_employees: 1200, account_value: 50000})</code></li>
+<li>Add a new customer with a business_name of Apple, num_employees of 35100, account_value of 23000000<br><code>db.customers.insert({business_name: &quot;Apple&quot;, num_employees: 35100, account_value: 23000000})</code></li>
+<li>Add a new customer with a business_name of Ma&amp;Pa, num_employees of 15, account_value of 1200<br><code>db.customers.insert({business_name: &quot;Ma&amp;Pa&quot;, num_employees: 15, account_value: 1200})</code></li>
+</ol>
+</li>
+<li>Now, practice querying for results:<ol>
+<li>Select all customers with an account value of greater than 10000<br><code>db.customers.find({account_value: {$gt: 10000}})</code></li>
+<li>Select only names of businesses that have less than 2000 employees<br><code>db.customers.find({num_employees: {$lt: 2000}}, {business_name:1, _id:0})</code><br>3.Select all customers sorted by number of employees (ascending, or lowest to highest)<br><code>db.customers.find().sort({num_employees: 1})</code></li>
+<li>Select the id of customers whose business name’s begin with ‘A’ (hint: <a href="http://docs.mongodb.org/manual/reference/operator/query/where/#op._S_where" target="_blank" rel="external">http://docs.mongodb.org/manual/reference/operator/query/where/#op._S_where</a>)<br><code>db.customers.find({$where: &quot;this.business_name[0]==&#39;A&#39;&quot;}, {_id:1})</code></li>
+</ol>
+</li>
+<li>Let’s modify some of our records:<ol>
+<li>Add a rep for each record in the collection:<ul>
+<li>For Acme, rep name: ‘Wile E. Coyote’, employee #: 4311<br><code>db.customers.update({business_name: &quot;Acme&quot;}, {$set: {rep_name: &quot;Wile E. Coyote&quot;, employee_num: 4311 }})</code></li>
+<li>For Apple, rep name: ‘Fan Boi’, employee #: 1216<br><code>db.customers.update({business_name: &quot;Apple&quot;}, {$set: {rep_name: &quot;Fan Boi&quot;, employee_num: 1216 }})</code></li>
+<li>For Ma&amp;Pa, rep name: ‘Jedediah’, employee #: 5918<br><code>db.customers.update({business_name: &quot;Ma&amp;Pa&quot;}, {$set: {rep_name: &quot;Jedediah&quot;, employee_num: 5918 }})</code></li>
+</ul>
+</li>
+<li>Update every customer to have an active status of true<br><code>db.customers.update({},{$set: {active: true}}, {multi: true})</code></li>
+<li>Update Ma&amp;Pa to have 20 employees and an account_value of 2500<br><code>db.customers.update({business_name: &quot;Ma&amp;Pa&quot;},{$set: {num_employees: 20, account_value: 2500}})</code></li>
+<li>Select the rep names of every customer<br><code>db.customers.find({},{rep_name:1, _id:0})</code></li>
+</ol>
+</li>
+<li>Kelsey challenge: Delete a record/document (I deleted my Acme entry)<br> <code>db.customers.findAndModify({query: {business_name: &quot;Acme&quot;}, remove:true})</code></li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><a href="https://github.com/metasean/extinct-mammals" target="_blank">extinct-mammals</a><br>: Node back-end exposing the noSQL data</li>
+</ul>
+<h1 id="Post-class_project">Post-class project</h1>
+<p>So the reason this post is late, is that I got uber-focused on a project.  I don’t want to introduce the actual project yet, but the stack is a basic MEAN stack.  I had run into a hiccup with our noSQL project, which I was using as a template for this new project.  So I had the backend mostly up within an hour or so, but then ran into this bug</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://metasean.github.io/2014/11/08/DevMountain-Week-Seven/" data-id="pe30wh3534kuuqfy" class="article-share-link">Share</a>
+      
+        <a href="http://metasean.github.io/2014/11/08/DevMountain-Week-Seven/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevMountain/">DevMountain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/databases/">databases</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/11/git-remote-set-url/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          git remote set-url
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/01/ATM-Object-Object-has-no-method-find/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ATM: &quot;Object #&lt;Object&gt; has no method &#39;find&#39;&quot;</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevMountain/">DevMountain</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Projects/">Projects</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/all-the-mistakes/">all the mistakes</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tips-n-tricks/">tips-n-tricks</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/-q/" style="font-size: 10.00px;">$q</a><a href="/tags/-this/" style="font-size: 10.00px;">.this</a><a href="/tags/ATM/" style="font-size: 15.00px;">ATM</a><a href="/tags/Angular/" style="font-size: 17.50px;">Angular</a><a href="/tags/BOM/" style="font-size: 10.00px;">BOM</a><a href="/tags/CSS3/" style="font-size: 10.00px;">CSS3</a><a href="/tags/DI/" style="font-size: 10.00px;">DI</a><a href="/tags/DevMountain/" style="font-size: 20.00px;">DevMountain</a><a href="/tags/Express/" style="font-size: 10.00px;">Express</a><a href="/tags/HTML5/" style="font-size: 10.00px;">HTML5</a><a href="/tags/Hexo/" style="font-size: 10.00px;">Hexo</a><a href="/tags/JavaScript/" style="font-size: 10.00px;">JavaScript</a><a href="/tags/MVW/" style="font-size: 10.00px;">MVW</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/MongoDB/" style="font-size: 10.00px;">MongoDB</a><a href="/tags/MySQL/" style="font-size: 10.00px;">MySQL</a><a href="/tags/Node/" style="font-size: 12.50px;">Node</a><a href="/tags/Promises/" style="font-size: 10.00px;">Promises</a><a href="/tags/Sublime/" style="font-size: 10.00px;">Sublime</a><a href="/tags/TDD-BDD/" style="font-size: 10.00px;">TDD/BDD</a><a href="/tags/atm/" style="font-size: 10.00px;">atm</a><a href="/tags/callbacks/" style="font-size: 10.00px;">callbacks</a><a href="/tags/closures/" style="font-size: 10.00px;">closures</a><a href="/tags/cohort-io/" style="font-size: 10.00px;">cohort.io</a><a href="/tags/colleagues/" style="font-size: 10.00px;">colleagues</a><a href="/tags/colophon/" style="font-size: 10.00px;">colophon</a><a href="/tags/databases/" style="font-size: 10.00px;">databases</a><a href="/tags/git/" style="font-size: 10.00px;">git</a><a href="/tags/learning/" style="font-size: 10.00px;">learning</a><a href="/tags/lessons-learned/" style="font-size: 10.00px;">lessons learned</a><a href="/tags/mentoring/" style="font-size: 10.00px;">mentoring</a><a href="/tags/meta-mark/" style="font-size: 10.00px;">meta-mark</a><a href="/tags/modules/" style="font-size: 12.50px;">modules</a><a href="/tags/stage-hand/" style="font-size: 10.00px;">stage-hand</a><a href="/tags/tips-n-tricks/" style="font-size: 10.00px;">tips-n-tricks</a><a href="/tags/trek/" style="font-size: 10.00px;">trek</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/11/11/git-remote-set-url/">git remote set-url</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/08/DevMountain-Week-Seven/">DevMount - Week Seven</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/01/ATM-Object-Object-has-no-method-find/">ATM: &quot;Object #&lt;Object&gt; has no method &#39;find&#39;&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Order-of-Injection/">ATM: Angular Module -  Order of Injection</a>
+          </li>
+        
+          <li>
+            <a href="/2014/10/27/ATM-Angular-Module-Definition-vs-Loading/">ATM: Angular Module -  Definition vs Loading</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 MetaSean<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/About" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'metaseansblog';
+  
+  var disqus_url = 'http://metasean.github.io/2014/11/08/DevMountain-Week-Seven/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
